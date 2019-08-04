@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel = "stylesheet" type = "text/css" href="./dist/css/bootstrap.min.css">
+    <style>
+    .read{position:relative}
+    </style>
+    <script>
+        function check(){
+        var id1 = document.getElementById("id1");
+        var pw1 = document.getElementById('pw1');
+        if(id1.value == 'abc' && pw1.value == '123'){alert("로그인성공")}
+        else if(id1.value.length > 0 && pw1.value.length > 0){alert("로그인실패")}
+        if(id1.value.length == 0 && pw1.value.length == 0){alert("아이디부터 적어주세요")}
+        if(id1.value.length == 0 && pw1.value.length == 0){id1.focus()}
+        if(id1.value.length == 0 && pw1.value.length > 0){alert("아이디를 적어주세요")}
+        if(id1.value.length == 0 && pw1.value.length == 0){id1.focus()}
+        if(id1.value.length > 0 && pw1.value.length == 0){alert("비밀번호를 적어주세요")}
+        if(id1.value.length > 0 && pw1.value.length == 0){pw1.focus()}
+        }
+    </script>
+</head>
+<body>
+    <div class = "read" style = "top:70%; left:40%;">
+        <h2>로그인</h2><br><br>
+        <input type = text class = "write" placeholder = "아이디" style = "width:300px; margin:10px" id = id1 vlaue = ""></input><br>
+        <input type = "passward" class = "write" placeholder = "비밀번호" style = "width:300px; margin:10px" id = pw1 value = ""></input><br>
+        <button type="button" class="btn btn-default btn-lg" style = "width:300px; margin:10px" onclick=check()>로그인</button><br>
+        <a href = "./123.html"><button type="button" class="btn btn-default btn-lg" style = "width:300px; margin:10px">회원가입</button></a><br>
+        <a herf = "qwqwf"style = "color:gray">회원가입</a>
+        <a herf = "wegweg"style = "color:gray; width:200px; text-align:right;">아이디/비밀번호 찾기</a>
+    </div>
+</body>
+</html>

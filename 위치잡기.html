@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style type="text/css">
+		div {
+			width : 100px;
+			height: 100px;
+		}
+		.inlineBlock {	
+			display: inline-block;
+		}
+		.inline {
+			display: inline;
+		}
+		.relative {
+			position:relative;
+		}
+		.absolute {
+			position: absolute;
+		}
+		.fixed{
+			position: fixed;
+		}
+		.float{
+			float:left;
+		}
+		.z_index{
+			position : absolute;
+		}
+	</style>
+</head>
+<body>
+	<h2>기본형이 블록인 것들을 inline으로 배치한다.(크기조절 O)</h2>
+	<div class="inlineBlock" style="background: red;">
+		First
+	</div>
+	<div class="inlineBlock" style="background: orange;">
+		Second
+	</div>
+	<div class="inlineBlock" style="background: green;">
+		Third
+	</div>
+
+	<h2>기본형이 블록인 것들을 inline으로 배치한다.(크기조절 X)</h2>
+	<div class="inline" style="background: red;">
+		First
+	</div>
+	<div class="inline" style="background: orange;">
+		Second
+	</div>
+	<div class="inline" style="background: green;">
+		Third
+	</div>
+
+	<h2>top, bottom, left, right으로 원하는 위치 지정가능</h2>
+	<div class="relative" style="background: red; top:200px;">
+		First
+	</div>
+	<div class="relative" style="background: orange;">
+		Second
+	</div>
+	<div class="relative" style="background: green; top:-200px;">
+		Third
+	</div>
+
+	<h2>페이지의 시작 위치를 기준으로 잡음</h2>
+	<div class="absolute" style="background: red; top:100px; right:200px;">
+		First
+	</div>
+	<div class="absolute" style="background: orange; top:200px; right:200px;">
+		Second
+	</div>
+	<div class="absolute" style="background: green; top:300px; right:200px;">
+		Third
+	</div>
+
+	<h2>브라우저를 기준으로 잡음</h2>
+	<div class="fixed" style="background: red; top:100px; right:100px;">
+		First
+	</div>
+	<div class="fixed" style="background: orange; top:200px; right:100px;">
+		Second
+	</div>
+	<div class="fixed" style="background: green; top:300px; right:100px;">
+		Third
+	</div>
+
+	<h2>float에 대해서 알아보자</h2>
+	<img src="./zzang.png"/>
+	<p>float를 사용하지 않은 일반형태</p>
+
+	<img src="./zzang.png" class = "float"/>
+	<p>float를 사용한 형태</p>
+	<p style="clear:both;">clear사용해서 flaot 빠져나오기</p>
+
+	<h2>요소의 스택 우선순서 결정(없으면 순서대로 배치)</h2>
+	<small>position이 static이면 안됨.</small>
+	<div class="z_index" style="background: red; z-index: 1;">
+		First
+	</div>
+	<div class="z_index" style="background: orange; left: 50px; z-index: 6;">
+		Second
+	</div>
+	<div class="z_index" style="background: green; left: 75px; z-index: 3;">
+		Third
+	</div>
+
+
+
+	
+</body>
+</html>

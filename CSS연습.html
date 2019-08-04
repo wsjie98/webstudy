@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./CSS연습.css" type="text/css">
+</head>
+<body>
+    <!--
+        css 우선순위
+        1. 속성값 뒤에 !important
+        2. 인라인 태그
+        3. #id
+        4. .class
+        5. 태그 이름으로 지정
+        6. 상위 객체에 의한 상속
+    -->
+    <div>
+        상속에 대해서 알아보겠음.
+        <p>상속되서 div에 css적용하면 p태그도 영향받음.</p>
+    </div>
+
+    <p>상속되지 않는 p태그</p>
+    
+    <div style="color : black;">
+        <span>상속</span>에 대해서 알아보겠음2.
+        <h3>상속안에 있는 직계 <span>span</span>태그에만 적용시킴</h3>
+    </div>
+
+    <div class="CLASS">
+        클래스 1
+    </div>
+    <p class="CLASS">
+        클래스 2 (이것만 따로 적용시켜볼꺼임.)
+    </p>
+
+    <p id="ID">아이디</p>
+
+    <h4 id="v1">가상선택자1_active(클릭ㄱㄱ)</h4>
+    <h4 id="v2">가상선택자2_hover(갖다대봐)</h4>
+    <input type="text" id="v3" size="30" placeholder="가상선택자3_focus(클릭ㄱㄱ)"/>
+    <a id="v4" href="http://www.~~~" target = "_blank">가상선택자4_link(클릭ㄱㄱ)</a>
+    <a id="v5" href="http://www.daum.net">가상선택자5_visited(클릭ㄱㄱ)</a>
+    
+    <h3 style="font-size: 10px">!important 테스트 (important > inline)</h3>
+
+    <div style="color:black;">
+        텍스트 관련 프로퍼티 (div li는 div안의 li가 직계든 뭐든 다 적용)
+        <ul type="square">
+            <li id="TEXT1">들여쓰기</li>
+            <li id="TEXT2">정렬</li>
+            <li id="TEXT3"><a href="#">링크 방문표시줄 없애기</a></li>
+            <li id="TEXT4">밑줄</li>
+            <li id="TEXT5">삭제</li>
+        </ul>
+    </div>
+
+    <div id="FONT">
+        폰트 관련 프로퍼티
+    </div>
+
+    <div id="BOX">
+        박스 관련 프로퍼티
+    </div>
+
+    <div id="CURSOR">
+        커서 프로퍼티 (커서 올리면 마우스 모양 바뀜 - 종류 ㅈㄴ 많음. 필요시 알아서 검색ㄱㄱ)
+    </div>
+</body>
+</html>
